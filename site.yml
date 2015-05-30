@@ -1,0 +1,12 @@
+# vim:ft=ansible:
+
+- hosts: all
+  sudo: yes
+  pre_tasks:
+    - name: Upgrade packages
+      apt:
+        upgrade: dist
+        update_cache: yes
+  roles:
+    - ANXS.monit
+    - ANXS.postgresql
