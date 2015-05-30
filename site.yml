@@ -8,5 +8,4 @@
         upgrade: dist
         update_cache: yes
   roles:
-    - ANXS.monit
-    - ANXS.postgresql
+    - liquidfeedback-core
