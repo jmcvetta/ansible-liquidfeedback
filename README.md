@@ -1,2 +1,9 @@
-# ansible-liquidfeedback
-EXPERIMENTAL - Ansible playbook to deploy Liquid Feedback
+Ansible playbook to deploy Liquid Feedback
+==========================================
+
+**EXPERIMENTAL**
+
+
+```bash
+vagrant up
+```
