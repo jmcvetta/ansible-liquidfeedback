@@ -1,0 +1,29 @@
+---
+
+- name: Ensure system package dependencies are installed
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - build-essential
+    - lua5.2
+    - liblua5.2-dev
+    - libpq-dev
+    - lighttpd
+    - pmake
+    - imagemagick
+    - exim4
+    - python-pip
+
+- name: Ensure Pip dependency packages are installed
+  pip:
+    name: {{ item }}
+    state: present
+  with_items:
+    - markdown2
+
+- name: Ensure Liquid Feedback Frontend source code is checked out
+  hg:
+    repo: http://www.public-software-group.org/mercurial/liquid_feedback_frontend
+    dest: "{{ lf_front_dir }}"

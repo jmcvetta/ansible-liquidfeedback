@@ -1,0 +1,3 @@
+---
+lf_front_dir: "{{ lf_home }}/liquid_feedback_frontend"
+

@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: Jason McVetta
+  description:  Ansible role to install Liquid Feedback Frontend
+  company: Silicon Beach Heavy Industries
+  license: GPLv3
+  min_ansible_version: 1.9
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+  categories:
+  - web
+dependencies: 
+  - ANXS.monit
+  - ANXS.postgresql
+  
