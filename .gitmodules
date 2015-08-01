@@ -1,6 +1,0 @@
-[submodule "roles/siliconheavy.liquidfeedback_frontend"]
-	path = roles/siliconheavy.liquidfeedback_frontend
-	url = git@github.com:siliconheavy/ansible-liquidfeedback-frontend.git
-[submodule "roles/siliconheavy.liquidfeedback_core"]
-	path = roles/siliconheavy.liquidfeedback_core
-	url = git@github.com:siliconheavy/ansible-liquidfeedback-core.git
