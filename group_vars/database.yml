@@ -1,0 +1,16 @@
+# vim:ft=ansible:
+---
+
+postgresql_databases:
+  - name: "{{ lf_pg_db}}"
+
+postgresql_users:
+  - name: "{{ lf_pg_user }}"
+    pass: "{{ lf_pg_password }}"
+    encrypted: no
+
+postgresql_user_privileges:
+  - name: "{{ lf_pg_user }}"
+    db: "{{ lf_pg_db }}"
+    priv: "ALL"
+

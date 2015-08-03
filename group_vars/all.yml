@@ -1,0 +1,20 @@
+# vim:ft=ansible:
+---
+
+# Admin users to create on all hosts
+genericusers_users:
+  - name: jmcvetta
+    ssh_keys:
+      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    system: yes
+    groups: [admin, staff]
+
+# Additional utility packagesto be installed by ANXS.utilities role
+utilities_extras:
+  - vim
+  - git
+
+lf_pg_host: liquid.siliconheavy.com
+lf_pg_db: liquidfeedback
+lf_pg_user: lf
+lf_pg_password: inSecUre
