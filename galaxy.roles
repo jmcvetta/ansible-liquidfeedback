@@ -1,3 +1,6 @@
 ANXS.monit
 ANXS.postgresql
+ANXS.generic-users
+ANXS.utilities
+ANXS.hostname
 Stouts.postfix
