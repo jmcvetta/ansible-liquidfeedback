@@ -4,3 +4,4 @@
 [submodule "roles/siliconheavy.liquidfeedback_core"]
 	path = roles/siliconheavy.liquidfeedback_core
 	url = git@github.com:siliconheavy/ansible-liquidfeedback-core.git
+	branch = develop
