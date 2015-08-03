@@ -7,6 +7,24 @@
       apt:
         upgrade: dist
         update_cache: yes
+
+    - name: Check if reboot is required
+      stat:
+        path: /var/run/reboot-required
+      register: stat
+
+    - name: Reboot host
+      command: shutdown -r now "Ansible updates triggered"
+      # Hang up immediately after issuing reboot command
+      async: 0
+      poll: 0
+      when: stat.stat.exists
+
+    - name: Wait for host to be ready
+      sudo: no
+      connection: local
+      local_action: wait_for host="{{ inventory_hostname }}" port=22
+
   roles:
     - ANXS.hostname
     - ANXS.utilities
