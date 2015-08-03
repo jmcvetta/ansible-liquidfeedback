@@ -8,4 +8,18 @@
         upgrade: dist
         update_cache: yes
   roles:
+    - ANXS.hostname
+    - ANXS.utilities
+    - ANXS.generic-users
+
+- hosts: database
+  sudo: yes
+  roles:
+    - ANXS.postgresql
+
+- hosts: core
+  sudo: yes
+  roles: 
     - siliconheavy.liquidfeedback_core
+  tags:
+    - core
