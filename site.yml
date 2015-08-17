@@ -29,6 +29,7 @@
     - ANXS.hostname
     - ANXS.utilities
     - ANXS.generic-users
+    - Stouts.postfix
 
 - hosts: database
   sudo: yes

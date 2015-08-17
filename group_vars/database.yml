@@ -3,14 +3,21 @@
 
 postgresql_databases:
   - name: "{{ lf_pg_db}}"
+  - name: www-data
 
 postgresql_users:
   - name: "{{ lf_pg_user }}"
     pass: "{{ lf_pg_password }}"
     encrypted: no
+  - name: www-data
 
 postgresql_user_privileges:
   - name: "{{ lf_pg_user }}"
     db: "{{ lf_pg_db }}"
     priv: "ALL"
-
+  - name: www-data
+    db: www-data
+    priv: "ALL"
+  - name: www-data
+    db: "{{ lf_pg_db }}"
+    priv: "ALL"
