@@ -34,6 +34,8 @@
   sudo: yes
   roles:
     - ANXS.postgresql
+  tags:
+    - database
 
 - hosts: core
   sudo: yes
@@ -41,3 +43,10 @@
     - siliconheavy.liquidfeedback_core
   tags:
     - core
+
+- hosts: frontend
+  sudo: yes
+  roles: 
+    - siliconheavy.liquidfeedback_frontend
+  tags:
+    - frontend
