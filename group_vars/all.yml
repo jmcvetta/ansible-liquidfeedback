@@ -18,3 +18,5 @@ lf_pg_host: liquid.siliconheavy.com
 lf_pg_db: liquidfeedback
 lf_pg_user: lf
 lf_pg_password: inSecUre
+
+lf_create_admin: true
